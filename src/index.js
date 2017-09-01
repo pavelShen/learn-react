@@ -1,1 +1,1 @@
-require('./component/main.jsx')
+require('./main.jsx')
