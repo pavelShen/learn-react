@@ -1,0 +1,8 @@
+.notificationsFrame{
+  &{
+    color:blue
+  }
+  & .panel{
+    color:red
+  }
+}

@@ -13,7 +13,17 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader',
+        exclude: /node_modules/,
+        use: [{
+          loader: 'style-loader',
+        }, {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+          },
+        }, {
+          loader: 'postcss-loader',
+        }],
       },
       {
         test: /\.js[x]?$/,

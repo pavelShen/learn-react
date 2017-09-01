@@ -10,7 +10,13 @@
   "author": "pavelshen",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.2",
     "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.6",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "style-loader": "^0.18.2",

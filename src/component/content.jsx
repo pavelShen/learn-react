@@ -1,32 +1,20 @@
-const React = require('react')
+import React from 'react'
+
+import ActivityItem from './activeItem'
 
 class Content extends React.Component {
   render() {
-    const {activities} = this.props; 
+    const {activities} = this.props; // ES6 destructuring
+
     return (
       <div className="content">
         <div className="line"></div>
 
-        {activities.map((activity) => {
-          return (
-            <div className="item">
-              <div className="avatar">
-                <img
-                  alt={activity.text}
-                  src={activity.user.avatar} />
-                {activity.user.name}
-              </div>
-
-              <span className="time">
-                {activity.timestamp}
-              </span>
-              <p>{activity.text}</p>
-              <div className="commentCount">
-                {activity.comments.length}
-              </div>
-            </div>
-          );
-        })}
+        {/* Timeline item */}
+        {activities.map((activity) => (
+          <ActivityItem
+            activity={activity} />
+        ))}
 
       </div>
     )

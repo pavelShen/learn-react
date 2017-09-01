@@ -1,5 +1,8 @@
 import Content from './component/content'
+import Clock from './component/Clock'
+import Header from './component/Header'
 
+require('./css/test.css')
 const React = require('react')
 const ReactDOM = require('react-dom')
 
@@ -29,34 +32,14 @@ class App extends React.Component {
     return (
       <div className="notificationsFrame">
         <div className="panel">
-          <Header title="Timeline" />
-          <Content activities={activities} />
+          abc
+          <Header title="123" />
+          {/* <Content activities={activities} /> */}
         </div>
+        <Clock />
       </div>
     )
   }
 }
 
-class Header extends React.Component {
-  render() {
-    return (
-      <div className="header">
-        <div className="fa fa-more"></div>
-
-        <span className="title">{this.props.title}</span>
-
-        <input
-          type="text"
-          className="searchInput"
-          placeholder="Search ..." />
-
-        <div className="fa fa-search searchIcon"></div>
-      </div>
-    )
-  }
-}
-
-
-
-var mount = document.querySelector('#app');
-ReactDOM.render(<App />, mount);
+ReactDOM.render(<App />, document.querySelector('#app'))
