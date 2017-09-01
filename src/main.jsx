@@ -2,7 +2,7 @@ import Content from './component/content'
 import Clock from './component/Clock'
 import Header from './component/Header'
 
-require('./css/test.css')
+const result = require('./css/test.css')
 const React = require('react')
 const ReactDOM = require('react-dom')
 
@@ -30,8 +30,8 @@ const activities = [
 class App extends React.Component {
   render() {
     return (
-      <div className="notificationsFrame">
-        <div className="panel">
+      <div className={ result.notificationsFrame }>
+        <div className={ result.panel }>
           abc
           <Header title="123" />
           {/* <Content activities={activities} /> */}
