@@ -1,3 +1,1 @@
-// require('./main.jsx')
-
-require('./main2.jsx')
+require('./main.jsx')
