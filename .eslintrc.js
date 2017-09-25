@@ -8,6 +8,7 @@ module.exports = {
     "airbnb"
   ],
   "rules":{
-    "semi": [2, "never"]
+    "semi": [2, "never"],
+    "react/prefer-stateless-function": 0
   }
 }

@@ -1,19 +1,26 @@
-require('./css/test.css')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './css/index.css'
 
-const React = require('react')
-const ReactDOM = require('react-dom')
+import Board from './component/Board'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-  }
-
+class Game extends React.Component {
   render() {
     return (
-      <div>abc</div>
-    )
+      <div className="game">
+        <div className="game-board">
+          <Board />
+        </div>
+        <div className="game-info">
+          <div>{/* status */}</div>
+          <ol>{/* TODO */}</ol>
+        </div>
+      </div>
+    );
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('#app'))
+ReactDOM.render(
+  <Game />,
+  document.getElementById('root'),
+)
