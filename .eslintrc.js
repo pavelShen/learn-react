@@ -9,6 +9,7 @@ module.exports = {
   ],
   "rules":{
     "semi": [2, "never"],
-    "react/prefer-stateless-function": 0
+    "react/prefer-stateless-function": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
   }
 }

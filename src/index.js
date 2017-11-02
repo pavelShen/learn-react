@@ -1,1 +1,3 @@
-require('./main.jsx')
+// require('./main.jsx')
+
+require('./reduxSrc/index.jsx')
