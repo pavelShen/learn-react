@@ -19,7 +19,7 @@ function todos(state = [], action) {
         ...state,
         {
           text: action.text,
-          complete: false,
+          completed: false,
         },
       ]
     case COMPLETE_TODO:

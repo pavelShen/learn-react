@@ -4,7 +4,7 @@ const actions = {
   SET_VISIBILITY_FILTER: 'SET_VISIBILITY_FILTER',
   VisibilityFilters: {
     SHOW_ALL: 'SHOW_ALL',
-    SHOW_COMPLETE: 'SHOW_COMPLETE',
+    SHOW_COMPLETED: 'SHOW_COMPLETED',
     SHOW_ACTIVE: 'SHOW_ACTIVE',
   },
   addTodo(text) {
