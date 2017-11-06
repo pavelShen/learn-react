@@ -57,7 +57,6 @@ export default class Board extends React.Component {
       status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`
     }
 
-    console.log(this.props.children)
     return (
       <div>
         <div className="status">{status}</div>
