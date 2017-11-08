@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { addTodo } from '../actions'
 
-export default class Footer extends Component {
+class Footer extends Component {
   renderFilter(filter, name) {
     if (filter === this.props.filter) {
       return name
@@ -21,17 +23,26 @@ export default class Footer extends Component {
   }
 
   render() {
+    const { dispatch } = this.props
     return (
-      <p>
-        Show:
-        {' '}
-        {this.renderFilter('SHOW_ALL', 'All')}
-        {', '}
-        {this.renderFilter('SHOW_COMPLETED', 'Completed')}
-        {', '}
-        {this.renderFilter('SHOW_ACTIVE', 'Active')}
-        .
-      </p>
+      <div>
+        <p>
+          Show:
+          {' '}
+          {this.renderFilter('SHOW_ALL', 'All')}
+          {', '}
+          {this.renderFilter('SHOW_COMPLETED', 'Completed')}
+          {', '}
+          {this.renderFilter('SHOW_ACTIVE', 'Active')}
+          .
+        </p>
+        <button onClick={() => {
+          dispatch(addTodo('abc'))
+        }}>
+          aa
+        </button>
+      </div>
+      
     )
   }
 }
@@ -43,4 +54,7 @@ Footer.propTypes = {
     'SHOW_COMPLETED',
     'SHOW_ACTIVE',
   ]).isRequired,
+  dispatch: PropTypes.func.isRequired,
 }
+
+export default connect()(Footer)
